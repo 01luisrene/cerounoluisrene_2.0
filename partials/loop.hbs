@@ -1,0 +1,77 @@
+{{!-- Loop Posts --}}
+<section class="___articulos___ flex wrap jcsa">
+{{#foreach posts}}
+{{!-- Primer Articulo --}}
+  <article {{#if @first}}class="primer-post" {{#if image}}style="background-image: url({{image}})"{{/if}} {{#if tags}}data-tag="{{#foreach tags limit="1"}}{{name}}{{/foreach}}"{{/if}}{{else}}class="{{post_class}}"{{/if}}>
+  {{#if @first}}
+    <header>
+      <a class="post-vinculo" href="{{url}}">
+        <h2 class="post-titulo">
+          {{title}}
+        </h2>
+      </a>
+    </header>
+    <section class="post-extracto flex wrap jcfe">
+      <p>{{excerpt words="40"}}[...]</p>
+      <a class="btn btn-first" href="{{url}}">Ver más »</a>
+    </section>
+    <footer class="post-footer flex wrap aicenter">
+      {{#author}}
+        {{#if image}}
+          <img src="{{image}}" alt="{{name}}'s Picture" />
+        {{/if}}
+        <a class="post-autor" href="{{url}}">{{name}}</a> 
+      {{/author}} 
+      <div class="box-time flex wrap aicenter">
+        <span class="icon-clock"></span>
+        <time class="time" datetime="{{date format="YYYY-MM-DD"}}">{{date published_at timeago="true"}}</time>
+      </div>
+    </footer>
+
+  {{else}}
+    {{!-- Segundo articulo al N --}}
+    <header class="post-header">
+      <a class="post-cover" href="{{url}}" title="{{title}}">
+        {{#if image}}
+        <img class="img" src="{{image}}" alt="{{title}}" />
+        {{else}}
+        <img class="img" src="{{asset "images/cover_default.jpg"}}" alt="{{title}}" />
+        {{/if}}
+      </a>
+      {{!-- Imagen del autor --}}
+      {{#author}}
+        <a class="post-autor" href="{{url}}" title="{{name}}">
+          <figure class="autor-img">
+            {{#if image}}
+              <img class="autor-foto" src="{{image}}" alt="{{name}}'s Picture"/>
+            {{/if}}
+            <figcaption><small class="oculto">{{name}}</small></figcaption>
+          </figure>
+        </a>
+      {{/author}} 
+    </header>
+    <section class="post-contenido">
+      <a class="post-vinculo" href="{{url}}">
+        <h2 class="post-titulo">
+          {{title}}
+        </h2>
+      </a>
+      <p class="excerpt">{{excerpt words="20"}}[...]</p>
+    </section>
+    <footer class="post-meta flex wrap jcfs aicenter">
+    <div class="box-time flex wrap jcfs">
+      <span class="icon-clock"></span>
+      <time class="time" datetime="{{date format="YYYY-MM-DD"}}">{{date published_at timeago="true"}}</time>
+    </div>
+    {{#if tags}}
+      {{#foreach tags limit="2"}}
+        <a href="{{url}}" title="{{name}}" class="tag-{{slug}}">{{name}}</a>
+      {{/foreach}}
+    {{/if}}
+    </footer>
+  {{/if}}
+  </article>
+{{/foreach}}
+</section>
+{{!-- Paginación --}}
+{{pagination}}

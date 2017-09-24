@@ -1,0 +1,97 @@
+//==========================================FRONT====================================//
+.front{
+  padding-top: $espacio-inicial * 2;
+  padding-bottom: $espacio-inicial * 3;
+  @include media-query($content-block){
+	  //1100px
+	  margin-top: 0;
+	  padding-top: $espacio-inicial;
+	}
+}
+.blog-nombre{
+  color: $front-nombre-autor-color;
+  font-size: 10vh;
+  text-transform: capitalize;
+  text-shadow: 0.3vh 0.2vh 0.1vh $color-negro;
+  margin-bottom: 0;
+  @include media-query($content-block){
+    
+  }
+  @include media-query($content-block) {
+    font-size: 5vw;  
+    text-shadow: 0.1vw 0.5vw 0.1vw $color-negro;
+  }
+  @include media-query($on-small-tablet) {
+    font-size: 7vw;  
+    text-shadow: 0.1vw 0.5vw 0.1vw $color-negro;
+  }
+}
+
+.btn-suscribete{
+  background-color: $color-verde-limon;
+  border: thin solid $color-gris-light;
+  color: $color-negro;
+  margin-bottom: $espacio-inicial;
+  padding: 10px 25px;
+  &:hover{
+    background-color: darken($color-verde-limon, 5%);
+    color: $color-negro;
+    text-decoration: none;
+  }
+  &:visited{
+    color: $color-negro;
+  }
+}
+
+.blog-description{
+  @include transparencia-bg-blanco(0.5);
+  border-width: 3px;
+  border-color: lighten($color-negro, 10%);
+  border-radius: 0;
+  color: $front-descripcion-color;
+  font-size: 1.25em;
+  line-height: normal;
+  margin-left: 0;
+  @include media-query($content-block) { //1100px
+    font-size: 1em;
+  }
+  @include media-query($on-small-tablet) { //800px
+    font-size: 3vw;
+    max-width: 90%;
+  }
+  @include media-query($on-smartphone){ //480px
+    font-size: 4vw;
+    max-width: 100%;
+  }
+}
+.scroll_top{
+	color: $front-down-color;
+  margin-left: -40px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  height: 80px;
+  width: 80px;
+  &:visited{
+    color: $front-down-color;
+  }
+  &:hover{
+  	color: darken($front-down-color, 10%);
+		[class*="icon"]{
+			-webkit-animation: none;
+			animation: none;
+		} 
+  }
+  [class*="icon"]{
+  	-webkit-animation: bounce 4s 2s infinite;
+  	animation: bounce 4s 2s infinite;
+  	font-size: 2em;
+  	position: relative;
+  }
+}
+
+//=======================================PUBLICIDAD HOME =========================================//
+
+.home___publicidad{
+  margin-bottom: 1.7em;
+}

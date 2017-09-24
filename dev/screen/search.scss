@@ -1,0 +1,62 @@
+//Contenedor del buscador
+.contenedor-search{
+	text-align: left;
+}
+//Contenedor del buscador google
+.gsc-control-cse{
+	background-color: transparent !important;
+	border: 0 !important;
+}
+//Caja buscador
+.gsc-input-box {
+	box-sizing: content-box;
+  padding: 1em!important;
+  margin-top: 2px;
+}
+.gscb_a {
+   font: 29px/18px arial,sans-serif !important;
+}
+
+//Botón
+input.gsc-search-button{
+	background-color: $color-verde-light !important;
+	box-sizing: content-box;
+	padding: 1.8em 3em!important;
+}
+
+//Caja resultados
+.gsc-table-result{
+	margin-left: 8px;
+}
+
+//Links busqueda
+.gs-webResult.gs-result a.gs-title:link{
+	color: $color-tema !important;
+	b{
+		color: $color-tema !important;
+	}
+}
+.gs-webResult.gs-result a.gs-title:hover{
+	color: #006632 !important;
+	b{
+		color: #006632 !important;
+	}
+}
+.gs-webResult.gs-result a.gs-title:visited{
+	color: $color-tema !important;
+	b{
+		color: $color-tema !important;
+	}
+}
+
+//Paginación
+.gsc-results .gsc-cursor-box .gsc-cursor-page{
+	color: $color-tema !important;
+	border: thin solid #DBD9D9;
+	font-size: 1.3em;
+	font-weight: 300;
+	padding: 0.3em;
+	&.gsc-cursor-current-page{
+		border: thin solid $color-tema;
+	}
+}

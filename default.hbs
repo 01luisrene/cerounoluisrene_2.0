@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+    {{> "head"}}
+</head>
+<body class="{{body_class}} nav-cerrado">
+
+<!--[if lt IE 9]>
+<div class="browser-antiguo">
+    <p class="browserupgrade">Está utilizando un navegador <strong>antiguo</strong>. Por favor <a href="http://browsehappy.com/">actualice su navegador</a> para mejorar su experiencia.</p>
+</div>
+ <![endif]-->  
+     
+    {{!-- Todo el contenido principal se inserta aquí, index.hbs, post.hbs, etc --}}
+    {{{body}}}
+
+    {{!-- FOOTER --}}
+    {{> "footer"}}
+
+    {{!-- Insertar jQuery antes de `{{ghost_foot}}` para que jQuery pueda ser utilizado en la inyección de código --}}
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    {{!-- Ghost genera scripts y datos importantes con esta etiqueta --}}
+    {{ghost_foot}}
+    {{!-- Vendor js --}}
+    <script type="text/javascript" src="{{ asset "js/vendor.js"}}"></script>
+    {{!-- Archivo JavaScript principal para 01luisrene --}}
+    <script type="text/javascript" async src="{{asset "js/app.js"}}"></script>
+    <script>
+      $(document).ready(function() {
+        //Videos responsivos
+        $('.post_contenido').fitVids();
+        //Dar una buena presentación al código
+        $('pre code').each(function(i, block) {
+          hljs.highlightBlock(block);
+        });
+        //Mostrar imágenes completas
+        $('.post_contenido a.image').magnificPopup({
+          type: 'image',
+            closeOnContentClick: true,
+            mainClass: 'mfp-img-mobile',
+          image: {
+            verticalFit: true,
+            titleSrc: function(item) {
+              return '<a class="mf-link" href="'+item.src+'" target="_blank">Abrir imagen original</a>';
+            }
+          },
+          zoom: {
+              enabled: true,
+              duration: 300
+            }
+        });
+      });
+
+    </script>
+    {{!-- ADDTHIS --}}
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57004124cf559f51"></script>
+    {{#is "post"}}
+      <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+    {{/is}}
+</body>
+</html>

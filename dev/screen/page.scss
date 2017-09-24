@@ -1,0 +1,238 @@
+//==========================================PAGE======================================//
+.page {
+  .box-time{
+    span{
+      margin-right: 10px;
+    }
+  }
+}
+
+//==========================================SOBRE MI - STACKS======================================//
+ul.lista-stack{
+  margin-bottom: 1.5em;
+  li{
+    width: 32.5%;
+    img{
+      border: thin solid $color-gris-light;
+      padding: 3px;
+    }
+  }
+}
+//=====================SOBRE MI - MI FAMILIA=======================================//
+img.familia-mas{
+    display: block;
+    margin: 0 auto;
+}
+p.familia-texto-descripcion{
+    text-align: center;
+    margin-top: 15px;
+}
+
+//======================================TAGS===================================/
+.tag-head-contenedor{
+  height: auto;
+}
+.tag{
+  padding-top: $espacio-inicial / 2;
+  padding-bottom: $espacio-inicial / 2;
+}
+.tag-titulo, .autor-titulo{
+  color: darken($loop-border-color, 60%);
+}
+.tag-titulo{
+  text-indent: 0;
+  text-shadow: 1px -1px 0px rgba(255, 255, 255, 1);
+}
+.tag-descripcion{
+  background: rgba(255,255,255, .7);
+  color: #50585D;
+  display: inline-block;
+  font-size: 1.11em;
+  margin-bottom: 0;
+  padding: .3em;
+}
+
+//======================================AUTOR===================================/
+.autor-perfil{
+  border-bottom: 1px solid $color-gris-light;
+  text-align: center;
+  padding-top: 0;
+  padding-bottom: 2em;
+  position: relative;
+  margin-bottom: 2.5em;
+  @include media-query($on-small-laptop){
+    //800px
+    margin-bottom: 2em;
+  }
+  &::after{
+    display: block;
+    content: "";
+    width: 7px;
+    height: 7px;
+    border: #E7EEF2 1px solid;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    margin-left: -5px;
+    background: #FFF;
+    border-radius: 100%;
+    box-shadow: #FFF 0 0 0 5px;
+  }
+  .autor-titulo{
+    text-indent: 0;
+    margin-top: $espacio-inicial / 2;
+  }
+
+  //============.autor-bio: style compartido de post.scss=====================//
+
+  //============.autor-meta: style compartido de post.scss====================//
+
+  .autor-imagen{
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 120px;
+    height: 120px;
+    padding: 3px;
+    margin: -100px auto 0 auto;
+    box-shadow: none;
+    @include media-query($on-small-laptop){
+      //800px
+      margin: -70px auto 0 auto;
+    }
+  }
+}
+
+//================================CONTACTO=================================//
+
+.formulario-contacto, .container-geo{
+  display: block;
+  padding: 5px;
+  @include media-query($on-laptop){
+    width: 100%;
+  }
+}
+.formulario-contacto{
+  .form-imput{
+    input[type='text'], input[type='email'], textarea{
+    border: thin solid $color-tema;
+    font-size: 1em;
+    line-height: 1.5em;
+    margin-bottom: 15px;
+    padding: 5px;
+    transition: 1s;
+    &:focus{
+      outline: none;
+      border-bottom:thin solid $color-tema;
+      }
+    }
+    input{
+      width: 100%;
+    }
+    textarea{
+      height: 200px;
+      resize: vertical;
+      width: 100%;
+    }
+  }
+}
+
+.map{
+  background: transparent;
+  border: thin solid $color-tema;
+  height: 450px;
+  width: 100%;
+  @include media-query($on-tablet){
+  //700px
+    height: 400px;
+  }
+  @include media-query($on-small-tablet){
+  //600px
+    height: 350px;
+  }
+  @include media-query($on-smartphone){
+  //480px
+    height: 300px;
+  }
+}
+.title-geo{
+  display: block;
+  font-size: 18px;
+  font-weight: normal;
+  margin-top: 1em;
+}
+
+.box-item-contacto{
+  border: thin solid $color-tema;
+  padding: 5px;
+  margin-top: .5em;
+  width: 100%;
+  @include media-query($on-small-tablet){
+    padding: 0;
+  }
+}
+.item-contacto{
+  display: inline-block;
+  margin:0;
+  padding-left: 10px;
+  vertical-align: top;
+  height: 100%;
+  width: 49.5%;
+  &:nth-child(2){
+    border-left: thin solid $color-tema;
+  }
+  @include media-query($on-small-tablet){
+    width: 100%;
+    border-bottom: thin solid $color-tema;
+    padding: 5px;
+    &:nth-child(2){
+      border-left: 0;
+      border-bottom: 0;
+    }
+  }
+  a{
+    font-weight: 400;
+    text-decoration: none;
+  }
+}
+.ico-email{
+  color: #F1C43A;
+}
+.ico-phone{
+  color: $menu-bg;
+  font-size: 25px !important;
+}
+//====================================AGRADECIMIENTO====================================//
+.mensaje-bien{
+  display: block;
+  color: $color-tema;
+  font-size: 5em;
+  line-height: 0;
+  margin-bottom: 15px;
+}
+
+//====DIGITAL OCEAN=====//
+.digital-ocean{
+  background-color: #F93E84;
+  background: radial-gradient(circle, #F970A3, #FA1168);
+  border: thin solid $color-gris-light;
+  margin-left: -8px;
+  margin-right: -8px;
+  padding: 5px 7px;
+  p{
+    color: $color-blanco;
+    font-weight: 300;
+    margin-bottom: 0;
+    > a{
+      color: #312F2F;
+      display: inline-block;
+      &:visited, &:hover{
+        color: #312F2F;
+      }
+    }
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}

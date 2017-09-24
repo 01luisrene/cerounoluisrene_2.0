@@ -1,0 +1,41 @@
+{{!-- Configuración del documento --}}
+<meta charset="utf-8" />
+<!--[if IE]>
+<meta name="X-UA-Compatible" content="IE=edge">
+<![endif]-->
+
+{{!-- Page Meta --}}
+<title>{{meta_title}}</title>
+<meta name="description" content="{{meta_description}}" />
+
+{{!-- Mobile Meta --}}
+<meta name="HandheldFriendly" content="True" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" />
+<meta name="apple-mobile-web-app-capable" content="no" />
+
+<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+{{!-- Geolocalización --}}
+<meta name="geo.placename" content="Trujillo" />
+<meta name="geo.region" content="PE" />
+
+{{!-- Favicon --}}
+<link rel="shortcut icon" href="{{asset "images/favicon.ico"}}" />
+
+{{!-- Estilo para navegadores antiguos --}}
+<style>
+.browser-antiguo {background-color: #363636;position: fixed;top: 0;text-align: center;height: 100%;width: 90%;padding: 0 5%;z-index: 999999;}
+.browser-antiguo .browserupgrade {font-family: "Lato", sans-serif;font-size: 2em;color: #A7A7A7;line-height: 1.2;vertical-align: middle;position: relative;top: 40%;}
+.browser-antiguo .browserupgrade a {color: #1A5FBB;}
+.browser-antiguo .browserupgrade a:hover {color: #14488e;}
+</style>
+<link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" media="all" />
+<link rel="stylesheet" type="text/css" href="{{asset "css/vendor.css"}}" media="all" />
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700|Lato:300,400,700" media="all" />
+
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<style>body{padding-top: 0 !important; overflow: hidden;}</style>
+<![endif]-->
+
+{{!-- Ghost produce estilos y metadatos importantes con esta etiqueta --}}
+{{ghost_head}}

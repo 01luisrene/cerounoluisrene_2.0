@@ -1,0 +1,9 @@
+<nav class="pagination flex jcc aicenter" role="navigation">
+  {{#if prev}}
+    <a class="newer-posts active flex jcc aicenter" href="{{page_url prev}}"><span class="icon-chevron-left"></span></a>
+  {{/if}}
+  <span class="page-number">Página {{page}} de {{pages}}</span>
+  {{#if next}}
+    <a class="older-posts active flex jcc aicenter" href="{{page_url next}}"><span class="icon-chevron-right"></span></a>
+  {{/if}}
+</nav>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Página no encontrada</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <style type="text/css" media="all">
+    * {
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+    html {
+      display: table;
+      height: 100%;
+      text-align: center;
+      width: 100%;
+      margin: 0;
+        }
+    body {
+      display: table-cell;
+    	background:#fff url('/assets/images/404.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    	font-family:sans-serif; 
+    	margin:0;
+      vertical-align:middle;
+		}
+    
+    p{
+    	font-size:1.5em;
+    }
+    .box-error{
+      background: rgba(255, 255, 255, 0.5);
+      display: flex;
+      -webkit-justify-content: center;
+      align-items: center;
+      margin:0 auto;
+      padding: 1.5em;
+      height:100%;
+      width:50%;
+    }
+    @media (max-width: 700px){
+      .box-error{
+        padding: 1%;
+        width:98%;
+      }
+    }
+    .error_inner{
+      display: -webkit-flex;
+      display: flex;
+      -webkit-justify-content: space-between;
+      justify-content: space-between;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+    .numero-error, .texto-error{
+      display: block;
+      margin-bottom: 0;
+      width: 45%;
+    }
+    .numero-error{
+    	color: #E82A33;
+    	font-size: 10vw;
+    	text-shadow: 3px 0px 0px rgba(42, 42, 42, .90);
+      text-align: right;
+    }
+    .texto-error{
+      border-left:  4px solid #2D2727;
+      color: #E82A33;
+      font-size: 4vw;
+      text-align: left;
+      padding-left:  15px;
+    }
+    h3{
+    	font-size: 2em;
+    }
+    .btn-inicio{
+      background: #34C17A;
+      border:  thin solid #00974B;
+      border-radius: 5px;
+      color:#fff;
+      font-size:16px;
+      text-decoration: none;
+      padding: 15px;
+    }
+    .btn-inicio:hover{
+      background: #14B865;
+      color: #fff;
+    }
+  </style>
+  </head>
+  <body>
+    <section class="box-error">
+      <div class="contenedor">
+        <section class="error_inner">
+        <span class="numero-error">404 </span><span class="texto-error">Not <br> Found</span>
+        </section>
+        <h3>Página no encontrada</h3>
+        <p>Ooops. Parece que has seguido un enlace roto.</p>
+        <p><a class="btn-inicio" href="/">Ir a la página de inicio</a></p>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<nav class="caja___menu js_caja___menu">
+  <div class="caja__menu__inner contenedor flex wrap jcsb aicenter">
+    {{!-- Contenedor del logo o titulo del blog & icono menú --}}
+    <div class="logo-iconoMenu flex wrap jcfe aicenter">
+      <a class="logo-rubik" href="{{@blog.url}}" title="{{@blog.title}}">
+        <div class="flex aicenter jcsb">
+          <div class="flex aicenter jcc"><img src="{{asset "images/logo_rubik/css3.png"}}"></div>
+          <div class="flex aicenter jcc"><img src="{{asset "images/logo_rubik/html5.png"}}"></div>
+          <div class="flex aicenter jcc"><img src="{{asset "images/logo_rubik/javascript.png"}}"></div>
+        </div>
+        <div class="flex aicenter jcsb">
+          <div class="flex aicenter jcc"><img src="{{asset "images/logo_rubik/github.png"}}"></div>
+          <div class="flex aicenter jcc"><img src="{{asset "images/logo_rubik/android.png"}}"></div>
+          <div class="flex aicenter jcc"><img src="{{asset "images/logo_rubik/swift3.png"}}"></div>
+        </div>
+        <div class="flex aicenter jcsb">
+          <div class="flex aicenter jcc"><img src="{{asset "images/logo_rubik/python.png"}}"></div>
+          <div class="flex aicenter jcc"><img src="{{asset "images/logo_rubik/node.js.png"}}"></div>
+          <div class="flex aicenter jcc"><img src="{{asset "images/logo_rubik/ghost.png"}}"></div>
+        </div>
+      </a>
+      {{!-- Icono del menú para móviles --}}
+      <a class="icono-menu jcc aicenter" id="js_icono_menu" href="javascript:void(0)">
+        <span class="icon-th-menu"></span>
+      </a>
+    </div>
+    {{!-- Contenedor de la lista de links tanto para PC & Mobile --}}
+    <div class="menu-desktop-mobile js_menu_desktop_mobile">
+      {{!-- Icono para cerrar el menú en móvil --}}
+      <i class="icon-close icono-cerrar" id="js_icono_cerrar" title="Cerrar"></i>
+      {{!-- Titulo del blog --}}
+      <a class="titulo-blog-mobile" href="{{@blog.url}}" title="{{@blog.title}}">
+          {{@blog.title}}
+      </a>
+      {{!-- Lista de items menú --}}
+      <ul class="nav no-lista">
+        {{#foreach navigation}}
+        <li class="nav-item nav-{{slug}}{{#if current}} nav-current{{/if}}">
+          <a class="nav-link" href="{{url absolute="true"}}">{{label}}</a></li>
+        </li>
+        {{/foreach}}
+      </ul>
+    </div>
+  </div>
+</nav>

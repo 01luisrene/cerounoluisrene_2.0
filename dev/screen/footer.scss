@@ -1,0 +1,48 @@
+//==========================================FOOTER===================================//
+.site-footer {
+  background-color: $footer-bg;
+  position:relative;
+  border-top: 1px solid $color-gris-light;
+  padding: ($espacio-inicial/2) 0;
+  z-index: 2;
+}
+.footer-contenedor {
+  color: #EFEDED;
+  font-size: 15px;
+}
+
+.footer-redes{
+  .redes-item{
+    margin-right: 10px;
+    height: 3em;
+    width: 3em;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  .redes-link{
+    color: $color-blanco;
+    text-decoration: none;
+    font-size: 2em;
+    transition: all 0.2s ease;
+    &:hover{
+      font-size: 2.2em;
+      &::before{
+        height: 2.4em;
+        width: 2.4em;
+      }
+    }
+  }
+}
+.copyright{
+  font-size: 1em;
+  text-align: center;
+  margin: 0.5em 0;
+  width: 100%;
+  a{
+    color: $color-blanco;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}

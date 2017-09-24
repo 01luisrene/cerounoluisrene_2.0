@@ -1,0 +1,206 @@
+@media print { 
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+  .contenedor___post, .post{
+    width: 100%;
+  }
+
+  /*HOME*/
+  .home-template .main-header{
+    display: block;
+    height: auto;
+  }
+  .nav .nav-item .nav-link{
+    text-decoration: none !important;
+  }
+  .nav .nav-item .nav-link::before{
+    content: "" !important;
+  }
+  /*Nombre del blog*/
+  .blog-nombre{
+    font-size: 2.5em;
+  }
+
+  .___articulos___ .post, 
+  .___articulos___ .primer-post{
+    flex: 0 80% !important;
+  }
+
+
+  .contenedor___post .post a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  .contenedor___post .post .post-lista-tags li a[href]:after, 
+  .contenedor___post .post .autor-nombre a[href]:after, 
+  .contenedor___post .post .autor-imagen a[href]:after{
+    content: "";
+  }
+
+  .home___publicidad,
+  .post___publicidad,
+  .pagination,
+  .site-footer,
+  .gh-subscribe,
+  .post__leer__mas,
+  .read-next,
+  .post__disqus,
+  .boton-subir{
+    display: none !important;
+  }
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    *:first-line {
+        box-shadow: none !important;
+        text-shadow: none !important;
+    } 
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+    /**
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+    */
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+      max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

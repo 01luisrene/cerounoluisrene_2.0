@@ -1,0 +1,40 @@
+//===================================PAGINACIÓN=====================================//
+.pagination{
+  margin: 2em auto;
+}
+.page-number{
+  font-size: 14px;
+  text-align: center;
+  @include media-query($on-smartphone){
+    font-size: 10px;
+  }
+}
+.newer-posts, 
+.older-posts{
+  margin: 0 0.5em;
+  padding: 0.3em 0.5em 0.1em 0.5em;
+  font-family: $font-family;
+  font-weight: 400;
+  text-transform: uppercase;
+  @include media-query($on-smartphone){
+    //480px
+    font-size: 0.6em;
+    padding: 0.8em 0.3em;
+    text-align: center;
+  }
+}
+.newer-posts.active, 
+.older-posts.active{
+  border-radius: 3px;
+  background: $paginacion-bg;
+  border: 2px solid darken($paginacion-bg, 5%);
+  color: $color-blanco;
+  font-size: 1em;
+  height: 35px;
+  width: 35px;
+  &:hover{
+    background: $paginacion-border-color;
+    color: $color-negro;
+    text-decoration: none;
+  }
+}

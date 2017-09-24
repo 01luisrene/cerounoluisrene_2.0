@@ -1,0 +1,625 @@
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+body { margin: 0; }
+article, aside, details,
+figcaption, figure,
+footer, header,
+main, menu, nav,
+section, summary { display:block; }
+audio, canvas, progress, video {
+    display: inline-block;
+    vertical-align: baseline;
+}
+audio:not([controls]) { display: none; height: 0; }
+[hidden], template { display: none; }
+a { background-color: transparent;}
+a:active, a:hover { outline: 0; }
+abbr[title] { border-bottom: 1px dotted; }
+b, strong { font-weight: bold; }
+dfn { font-style: italic; }
+mark { background: #ff0; color: #000; }
+small { font-size: 80%; }
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+img { border: 0; }
+svg:not(:root) { overflow: hidden; }
+figure { margin: 1em 40px; }
+hr { box-sizing: content-box; height: 0; }
+code, kbd, pre, samp { font-family: monospace, monospace; font-size: 1em; }
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+button { overflow: visible; }
+button, select { text-transform: none; }
+button, html input[type="button"],
+input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+button[disabled], html input[disabled] { cursor: default; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+input { line-height: normal; }
+input[type="checkbox"],
+input[type="radio"] { box-sizing: border-box; padding: 0; }
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button { height: auto; }
+input[type="search"] { -webkit-appearance: textfield; }
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+legend { border: 0; padding: 0; }
+textarea { overflow: auto; }
+optgroup { font-weight: bold; }
+table{ border-collapse: collapse; border-spacing: 0; }
+td, th{ padding: 0; }
+
+//==========================================================================
+//   Mis estilos
+//==========================================================================
+
+::-moz-selection { 
+    color: $color-blanco;
+    background: #21B469;
+}
+
+::selection {
+    color: $color-blanco; 
+    background: #21B469;
+}
+
+*, *::before, *::after{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+@font-face {
+  font-family: 'monacoregular';
+  src: url('/assets/fonts/monaco-webfont.eot');
+  src: url('/assets/fonts/monaco-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/assets/fonts/monaco-webfont.woff') format('woff'),
+       url('/assets/fonts/monaco-webfont.ttf') format('truetype'),
+       url('/assets/fonts/monaco-webfont.svg#monacoregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+//====================================ICONOS==================================
+@font-face {
+  font-family: 'iconos';
+  src:  url('/assets/fonts/iconos.eot?yz4alh');
+  src:  url('/assets/fonts/iconos.eot?yz4alh#iefix') format('embedded-opentype'),
+    url('/assets/fonts/iconos.ttf?yz4alh') format('truetype'),
+    url('/assets/fonts/iconos.woff?yz4alh') format('woff'),
+    url('/assets/fonts/iconos.svg?yz4alh#iconos') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'iconos' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chevron-down:before {
+  content: "\e90b";
+}
+.icon-search:before {
+  content: "\e90f";
+}
+.icon-chevron-right:before {
+  content: "\e90c";
+}
+.icon-chevron-left:before {
+  content: "\e910";
+}
+.icon-codepen:before {
+  content: "\e907";
+}
+.icon-close:before {
+  content: "\e908";
+}
+.icon-remove:before {
+  content: "\e908";
+}
+.icon-times:before {
+  content: "\e908";
+}
+.icon-like:before {
+  content: "\e90e";
+}
+.icon-rocket:before {
+  content: "\e904";
+}
+.icon-envelope:before {
+  content: "\e909";
+}
+.icon-email:before {
+  content: "\e909";
+}
+.icon-mail:before {
+  content: "\e909";
+}
+.icon-letter:before {
+  content: "\e909";
+}
+.icon-contact:before {
+  content: "\e909";
+}
+.icon-link:before {
+  content: "\e90a";
+}
+.icon-th-menu:before {
+  content: "\e902";
+}
+.icon-copyright:before {
+  content: "\e90d";
+}
+.icon-contact_mail:before {
+  content: "\e903";
+}
+.icon-mobile:before {
+  content: "\e906";
+}
+.icon-server:before {
+  content: "\e901";
+}
+.icon-user:before {
+  content: "\e900";
+}
+.icon-profile:before {
+  content: "\e900";
+}
+.icon-avatar:before {
+  content: "\e900";
+}
+.icon-home3:before {
+  content: "\e905";
+}
+.icon-location:before {
+  content: "\e947";
+}
+.icon-clock:before {
+  content: "\e94e";
+}
+.icon-stats-dots:before {
+  content: "\e99b";
+}
+.icon-google-plus3:before {
+  content: "\ea8d";
+}
+.icon-facebook:before {
+  content: "\ea90";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-github:before {
+  content: "\eab0";
+}
+
+body {
+  color: $color-negro;
+  font-family: $base-font-family;
+  font-weight: $base-font-weight;
+  font-size: $base-font-size;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+}
+blockquote, pre, hr, figure {
+  margin: 0;
+  padding: 0;
+}
+
+//=================MARGENES BOTTON===========
+//.fluid-width-video-wrapper: Contenedor de los videos YouTube y más.
+//.cp_embed_wrapper: Contenedor del código de Codepen
+
+[class*="tabla"],form, pre, .fluid-width-video-wrapper, .cp_embed_wrapper{
+  margin-bottom: 1.5em;
+}
+form fieldset{
+  margin-bottom: 1em;
+}
+
+img, input[type="image"] {
+  border:none;
+  max-width: 100%;
+  vertical-align: middle;
+}
+figcaption {
+  font-size: $small-font-size;
+}
+//Títulos
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family;
+  letter-spacing: -1px;
+  line-height: $base-line-height;
+  text-rendering: geometricPrecision;
+      margin: 0 0 0.4em 0;
+}
+
+h1{
+    font-size: 2.77em; //50px
+    text-indent: -3px;
+    @include media-query($content-pc){
+      //1000px
+      font-size: 2.55em; //46px
+    }
+    @include media-query($on-laptop){
+      //900px
+      font-size: 2.33em; //42px
+    }
+    @include media-query($on-small-laptop){
+      //800px
+      font-size: 2.11em; //38px
+    }
+    @include media-query($on-smartphone){
+      //480px
+      font-size: 1.77em; //32px
+    }
+}
+h2 {
+  font-size: 2em; //36px
+    @include media-query($content-pc){
+      //1000px
+      font-size: 1.88em; //34px
+    }
+    @include media-query($on-laptop){
+      //900px
+      font-size: 1.77em; //32px
+    }
+    @include media-query($on-small-laptop){
+      //800px
+      font-size: 1.66em; //30px
+    }
+    @include media-query($on-smartphone){
+      //480px
+      font-size: 1.55em; //28px
+    }
+}
+h3 {
+  font-size: 1.666em; //30px
+  @include media-query($content-pc){
+    //1000px
+    font-size: 1.55em; //28px
+  }
+  @include media-query($on-laptop){
+    //900px
+    font-size: 1.44em; //26px
+  }
+  @include media-query($on-small-laptop){
+    //800px
+    font-size: 1.33em; //24px
+  }
+  @include media-query($on-smartphone){
+    //480px
+    font-size: 1.22em; //22px
+  }
+}
+h4 {
+  font-size: 1.388em; //25px
+  @include media-query($content-pc){
+    //1000px
+    font-size: 1.277em; //23px
+  }
+  @include media-query($on-laptop){
+    //900px
+    font-size: 1.166em; //21px
+  }
+  @include media-query($on-small-laptop){
+    //800px
+    font-size: 1.055em; //19px
+  }
+  @include media-query($on-smartphone){
+    //480px
+    font-size: 0.944em; //17px
+  }
+}
+h5, h6{
+   font-size: 1.111em; //20px
+    @include media-query($on-laptop){
+      //900px
+      font-size: 1em; //18px
+    }
+    @include media-query($on-smartphone){
+      //480px
+      font-size: 0.88em; //16px
+    }
+}
+
+address {
+  display: inline;
+  font-style: inherit;
+}
+
+ul, ol{
+	li {
+    //Comienza en 18px
+		@include media-query($on-tablet){
+      //700px
+  	  font-size: 0.88em; //16px
+  	  line-height: 28px;
+	  }
+	  @include media-query($on-smartphone){
+        //480px
+  	    font-size: 0.77em; //14px
+  	    line-height: 26px;
+	  }
+	}
+}
+
+//Tamaños para las etiquetas li de las listas desordenadas
+ul{
+  li{
+    > ul {
+      li{
+        @media screen and (min-width: $on-tablet){
+          //700px
+          font-size: 0.88em; //16px
+          line-height: 28px;
+        }
+        @include media-query($on-tablet){
+        //700px
+        font-size: 0.9em; //14px
+        line-height: 24px;
+        }
+        @include media-query($on-smartphone){
+          //480px
+          font-size: 0.9em; //12
+          line-height: 22px;
+        }
+      }
+    }
+  }
+}
+
+//Tamaños para las etiquetas li de las listas ordenadas
+ol{
+  li{
+    > ol {
+      li{
+        @media screen and (min-width: $on-tablet){
+          //700px
+          font-size: 0.88em; //16px
+          line-height: 28px;
+        }
+        @include media-query($on-tablet){
+        //700px
+        font-size: 0.9em; //14px
+        line-height: 24px;
+        }
+        @include media-query($on-smartphone){
+          //480px
+          font-size: 0.9em; //12
+          line-height: 22px;
+        }
+      }
+    }
+  }
+}
+
+p{
+  line-height: 30px;
+  margin: 0 0 1.5em 0;
+  @include media-query($on-tablet){
+  //700px
+  font-size: 0.88em; //16px
+  line-height: 28px;
+  }
+  @include media-query($on-smartphone){
+    //480px
+    font-size: 0.77em; //14px
+    line-height: 26px;
+  }
+}
+
+a {
+  color: $color-tema;
+  cursor: pointer;
+  transition: all 0.5s linear;
+  text-decoration: none;
+  &:visited{
+    color: inherit;
+    text-decoration: none;
+  }
+  &:hover {
+    color: lighten($color-tema, 3%);
+  }
+}
+
+blockquote {
+  color: lighten($color-negro, 10%);
+  border-style: solid;
+  border-width: thin thin thin 0.5em;
+  border-color: $color-tema;
+  border-radius: 3px;
+  margin-top:1.75em;
+  margin-bottom: 1.75em;
+  margin-left: -1em;
+  padding: 0.8em;
+  letter-spacing: -1px;
+  @include media-query($on-tablet){//700px
+    padding: 0.5em;
+  }
+  @include media-query($on-tablet){
+    //480px
+    margin-left: 0;
+  }
+  p{
+    font-size: 20px;
+    margin-bottom: 0;
+    @include media-query($on-laptop){
+    //900px
+      font-size: 18px;
+    }
+    @include media-query($on-small-laptop){
+    //800px
+      font-size: 17px;
+    }
+    @include media-query($on-tablet){//700px
+      font-size: 16.5px;
+    }
+    @include media-query($on-small-tablet){
+    //600px
+      font-size: 16px;
+    }
+    @include media-query($on-smartphone){
+    //480px
+    }
+  }
+}
+ 
+kbd{
+    padding: 2px 4px;
+    font-size: 90%;
+    color: $color-blanco;
+    background-color: #333333;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25);
+ }
+pre,
+code {
+    font-family: $monaco-font-family;
+    font-size: 90%;
+    line-height: 1.5;
+    border-radius: 3px;
+    background-color: #eef;
+}
+code {
+    padding: 1px 5px;
+}
+pre {
+  > code.hljs{
+    overflow-x: auto;
+    padding: 1em;
+    @include media-query($on-smartphone){
+    //480px
+      overflow-x: scroll;
+    }
+  }
+}
+//=================================FORM: INPUTS - TEXTAREA=======================================//
+input, fieldset, textarea{
+ border: thin solid lighten($boton-bg, 5%);
+ &:focus{
+  outline: none;
+ }
+}
+textarea{
+  resize: vertical;
+  width: 100%;
+}
+button, input[type="submit"], input[type="button"], input[type="image"], input[type="reset"]{
+  border-radius: 3px;
+  display: inline-block;
+  cursor:pointer;
+  color: $color-blanco;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 0.8em;
+  line-height: normal;
+  padding:9px 13px;
+  width: auto;
+  &:focus{
+    outline: none;
+  }
+}
+
+button, input[type="submit"], input[type="button"]{
+  background: lighten($boton-bg, 5%);
+  border: thin solid lighten($boton-bg, 5%);
+  &:hover{
+    background: $boton-bg;
+  }
+}
+input[type="image"]{
+  background: $loop-border-color;
+  border: thin solid $color-gris-light;
+  padding:7px;
+  height: auto;
+}
+
+input[type="reset"]{
+  background: #F9F8F8;
+  border: thin solid $color-gris;
+  color: $color-negro;
+}
+
+input[type="color"]{
+  height: 45px;
+  width: 150px;
+}
+
+//==============================FORMULARIO=========================================//
+form fieldset{
+  input,  textarea{
+    display: block;
+    margin-bottom: 1em;
+  }
+}
+
+//=====================================TABLA=========================================//
+.tabla-contenedor {
+  overflow-x: auto;
+}
+
+table.tabla {
+  border: 1px solid rgba($table-secondary-color,.5);
+  border-collapse: collapse;
+  min-width: $table-width;
+  @include center;
+  td p{
+    line-height: normal;
+    margin-bottom: 0;
+  }
+  td, th {
+    padding : .8em;
+    border-bottom: 1px solid rgba($table-secondary-color,.5);
+  }
+
+  //estilo de las cabeceras
+  th {
+    background : $table-bg;
+    color: $table-third-color;
+    font-weight : normal;
+    text-align : left;
+  }
+
+  // Resaltado de filas y columnas
+  tr {
+    &:hover {
+      background : rgba($table-secondary-color,.2);
+    }
+    &:nth-child(2n){
+      background : rgba($table-secondary-color,.2);
+    }
+  }
+}

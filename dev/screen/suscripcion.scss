@@ -1,0 +1,56 @@
+//Formulario de suscripción
+.contenedor-suscribete{
+  display: flex;
+  flex-direction: column;
+  margin-top: $espacio-inicial;
+  max-width: 700px;
+  width: 100%;
+}
+.contenedor-suscribete{
+  text-align: center;
+}
+.suscribete-mensaje{
+  display: block;
+  margin: ($espacio-inicial / 2) 0;
+}
+.contenedor-suscribete .formulario__suscripcion {
+  background: lighten($color-tema, 65%);
+  border: lighten($color-tema, 55%) 1px solid;
+  margin: 30px auto;
+  padding: 40px;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 5px;
+  text-align: left;
+  .form-group input{
+    margin-bottom: $espacio-inicial / 2;
+  }
+  button{
+    width: 100%;
+  }
+}
+.subscribe-email{
+  border: thin solid lighten($color-tema, 10%);
+  font-family: $font-family;
+  font-size: $small-font-size;
+  transition: all ease 0.1s;
+  margin: 0;
+  padding: 7px;
+  width: 100%;
+  &:focus{
+    border: thin solid $color-tema;
+    outline: none;
+  }
+}
+//Error del Formulario de Suscripción
+.main-error{
+  color: #F45959;
+  text-align: center;
+}
+
+//Lista de lenguajes de programación
+.lista.code{
+  li + li{
+    margin-left: 10px;
+  }
+}

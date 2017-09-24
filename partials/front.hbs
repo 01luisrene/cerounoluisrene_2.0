@@ -1,0 +1,12 @@
+<section class="front interior">
+	<h1 class="blog-nombre">{{@blog.title}}</h1>
+  {{#if @blog.description}}
+    <blockquote  class="blog-description">
+      <p>{{@blog.description}}</p>
+    </blockquote>
+  {{/if}}
+  <a class="btn btn-suscribete" href="/subscribe/">Suscribete</a>
+  <a class="scroll_top flex jcc aicenter" id="scroll_top" href="#main" data-offset="-30">
+    <span class="icon-chevron-down"></span>
+  </a>
+</section>

@@ -1,0 +1,36 @@
+{{!< default}}
+{{#post}}
+<header class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}} no-cover{{/if}}">
+    {{navigation}}
+</header>
+<main class="main" role="main">
+<div class="contenedor___post">
+  <article class="{{post_class}}">
+    <header class="page-header">
+      <h1 class="post-titulo">{{title}}</h1>
+      <div class="box-time flex wrap aicenter">
+        <span class="icon-clock"></span>
+        <time class="time" datetime="{{date format="YYYY-MM-DD"}}"> {{date format="DD MMMM YYYY"}}</time>
+      </div>
+    </header>
+    <section>
+      <div class="addthis_sharing_toolbox compartir-redes-sociales"></div>
+      {{content}}
+
+      <script>
+        (function() {
+          var cx = '004510286827910837042:fae1lddv_yy';
+          var gcse = document.createElement('script');
+          gcse.type = 'text/javascript';
+          gcse.async = true;
+          gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(gcse, s);
+        })();
+      </script>
+      <gcse:search></gcse:search>
+    </section>
+  </article>
+</div>
+</main>
+{{/post}}

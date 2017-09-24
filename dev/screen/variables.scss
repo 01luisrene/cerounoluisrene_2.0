@@ -1,0 +1,120 @@
+@charset "utf-8";
+/* ==============================================================================
+    TEMA GHOST DESARROLLADO PARA EL SITIO WEB 01luisrene.com (Luis Rene Mas Mas)
+   ==============================================================================*/
+
+// Mis variables
+$base-font-family           : 'Roboto', Helvetica, Arial, sans-serif;
+$font-family                : 'Lato', sans-serif;
+$monaco-font-family         : 'monacoregular';
+$base-font-size             : 18px;
+$base-font-weight           : 400;
+$small-font-size            : $base-font-size * 0.875;
+$base-line-height           : 1.15em;
+$espacio-inicial            : 30px;
+
+//BTN
+$boton-bg                   : #359AFF;
+
+//ANCHOS TEME
+$tema-contenedor-width      : 800px;
+$tema-contenedor-width-small: $tema-contenedor-width - 80;
+
+//COLORES DEL TEME
+$color-tema                 : #00A451;
+$color-verde-light          : #21B469;
+$color-verde-limon					: #b4ed50;
+$color-negro                : #111;
+$color-blanco               : #fff;
+$color-gris                 : #828282;
+$color-gris-light           : lighten($color-gris, 40%);
+$color-gris-dark            : darken($color-gris, 25%);
+$color-azul                 : #468AB3;
+$color-azul-light           : lighten($color-azul, 10%);
+$color-naranja              : #EA3800;
+$color-naranja-light        : #FF602E;
+$color-no-cover             : #D0DCDF;
+
+//MENU
+$menu-bg                    :#00A452;
+$menu-link-color            : #fff;
+$menu-link-hover-color      : #391F39;
+$menu-icono-color           : #332D2D;
+
+//FRONT
+$front-nombre-autor-color   : $color-tema;
+$front-descripcion-color    : #384a50;
+$front-down-color						: $color-verde-limon;
+
+//LOOP
+$loop-primer-articulo-color	: #D7E0E3;
+$loop-border-color          : $loop-primer-articulo-color;
+$loop-item-link-color       : #008340;
+$loop-primer-articulo-pf-bg : rgba(33,180,105, 0.8); //Primer post footer background
+$color-calendario           : $color-azul;
+
+//PAGINACIÓN
+$paginacion-bg              : $color-tema;
+$paginacion-border-color    : $color-verde-limon;
+
+//TAGS
+$tag-btn-bg                 : $color-azul-light;
+$tag-btn-bg-hover           : #086195;
+
+//FOOTER
+$footer-bg                  : $color-tema;
+
+//BG REDES
+$facebook                   : #3864a3;
+$twitter                    : #4391e8;
+$youtube                    : #cc181e;
+$google-plus                : #db4437;
+$github                     : #333333;
+
+//POLÍTICA DE COOKIES
+$cookie-btn-bg              : #F0D84D;
+$cookie-btn-border-color    : #2E2E2E;
+
+//TABLE
+$table-bg                   : $color-tema;
+$table-secondary-color      : lighten(#76A63F,25);
+$table-third-color          : #fff;
+$table-width                : $tema-contenedor-width - ($espacio-inicial * 2);
+
+//ANCHOS (responsive design)
+$content-block              : 1100px;
+$content-pc                 : 1000px;
+$on-laptop                  : 900px;
+$on-small-laptop            : 800px;
+$on-tablet                  : 700px;
+$on-small-tablet            : 600px;
+$on-smartphone              : 480px;
+
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+//MEDIA QUERIES
+@include media-query($content-block){
+  //1100px
+}
+@include media-query($content-pc){
+  //1000px
+}
+@include media-query($on-laptop){
+//900px
+}
+@include media-query($on-small-laptop){
+//800px
+}
+@include media-query($on-tablet){
+//700px
+}
+@include media-query($on-small-tablet){
+//600px
+}
+@include media-query($on-smartphone){
+//480px
+}

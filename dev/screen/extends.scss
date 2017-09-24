@@ -1,0 +1,30 @@
+// Clearfix
+%clearfix {
+  &:after {
+      content: "";
+      display: table;
+      clear: both;
+  }
+}
+//margin-bottom: 15px
+%margen-inferior{
+  margin-bottom: $espacio-inicial / 2;
+}
+//Display bloque
+%block{
+  display: block;
+}
+
+//viñetas
+%vinietas{
+  display: inline-block;
+  color: $color-negro;
+  content: "\f10c";
+  font-family: "FontAwesome";
+  speak: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+}

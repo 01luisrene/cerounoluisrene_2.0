@@ -1,0 +1,56 @@
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="contenedor footer-contenedor flex fdc">
+      <section>
+        <ul class="footer-redes no-lista flex jcc">
+          {{#if @blog.twitter}}
+          <li class="redes-item flex jcc aicenter">
+            <a class="redes-link icon-twitter" href="{{twitter_url @blog.twitter}}" target="_blank">
+              <i class="oculto">Twitter</i>
+            </a>
+          </li>
+          {{/if}}
+          {{#if @blog.facebook}}
+          <li class="redes-item flex jcc aicenter">
+            <a class="redes-link icon-facebook" href="{{facebook_url @blog.facebook}}" target="_blank">
+              <i class="oculto">Facebook</i>
+            </a>
+          </li>
+          {{/if}}
+          <li class="redes-item flex jcc aicenter">
+            <a class="redes-link icon-github" href="https://www.github.com/01luisrene" target="_blank">
+              <i class="oculto">GitHub</i>
+            </a>
+          </li>
+          <li class="redes-item flex jcc aicenter">
+            <a class="redes-link icon-google-plus3" href="https://plus.google.com/u/0/+01LuisRene" target="_blank">
+              <i class="oculto">Google Plus</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="flex wrap jcc">
+        <p class="copyright">
+          <a href="{{@blog.url}}">
+            <b>{{@blog.title}}</b></a> 
+            <span class="icon-copyright"></span> 
+            2016 - {{date format="YYYY"}}
+          </a>
+        </p>
+      </section>
+  </div>
+</footer>
+<!-- Política de cookies  -->
+<div class="barra-aceptacion-cookie animated" id="js_barra_aceptacion_cookie" style="display: none">
+  <p>Utilizo cookies propios y de terceros. Al continuar navegando por el blog entiendo que aceptas nuestra política de cookies.
+  <a href="{{@blog.url}}/politica-cookies/"  class="info-cookie" target="_blank">Más&nbsp;información</a>
+  <a href="javascript:void(0)" id="js_btn_cookie" class="btn-cookie">
+    <span class="icon-close"></span>
+  </a>
+  </p>
+</div>
+
+<!-- Botón up -->
+<a href="javascript:void(0)" id="js_up"  class="boton-subir" title="Subir">
+  <i class="icon-rocket"></i>
+</a>

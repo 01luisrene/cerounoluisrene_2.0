@@ -1,0 +1,26 @@
+{{!< default}}
+	<!-- Header principal -->
+ 	<header class="main-header home {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
+    {{!-- Links de Navegación del Blog --}}
+    {{navigation}}
+    {{!-- Sección frontal del Blog --}}
+    {{> "front"}}
+  </header>
+
+  {{!-- Publicidad Home --}}
+  <div class="home___publicidad" align="center">
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-3311622925293570"
+       data-ad-slot="3768997246"
+       data-ad-format="auto"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  </div>
+  {{!-- El área de contenido principal en la página principal --}}
+  <main id="main" class="main" role="main">
+    {{!-- Loop incluye el bucle de posts - partials/loop.hbs --}}
+    {{> "loop"}}
+  </main>

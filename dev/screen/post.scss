@@ -6,35 +6,6 @@
 //==========================COMPARTIR============================//
 .compartir-redes-sociales{
   margin-bottom: 1.5em;
-  ul{
-    vertical-align: top;
-    li{
-      display: inline-block;
-      margin-bottom: 0 !important;
-      line-height: 0;
-      &:nth-child(1){}
-      &:nth-child(2){}
-      &:nth-child(3){
-        background: $google-plus;
-        border-radius: 3px;
-        font-size: 12px;
-        padding: 4px 4px;
-        &:hover{
-          background: lighten($google-plus, 7%);
-        }
-        a{
-          color: $color-blanco;
-          &:hover{
-            color: $color-blanco;
-            text-decoration: none;
-          }
-        }
-      }
-      &:not(:last-child){
-        margin-right: 10px;
-      }
-    }
-  }
 }
 
 

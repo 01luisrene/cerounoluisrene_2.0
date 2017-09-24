@@ -1,11 +1,12 @@
 {{!< default}}
 {{#post}}
 <!-- Header principal -->
-<header class="main-header post-head {{#if image}}"style="background-image: url({{image}}){{else}} no-cover{{/if}}">
+<header class="main-header post-head" style="background-image: url({{#if image}}{{image}}{{else}}{{asset "images/cover_default.jpg"}}{{/if}})">
     {{!-- Links de Navegación del Blog --}}
     {{navigation}}
     
 </header>
+
 {{!-- Publicidad Principal Post --}}
 <div class="post___publicidad" align="center">
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -18,6 +19,7 @@
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 </div>
+
 <main class="main" role="main">
   <article class="contenedor___post {{post_class}}">
     <header>
@@ -36,7 +38,36 @@
     </header>
     <section class="post_contenido">
     
-     <div class="addthis_sharing_toolbox compartir-redes-sociales"></div>
+      <div class="compartir-redes-sociales">
+        <ul class="no-lista flex jcc aicenter">
+          <li>
+            <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.10&appId=128181427574206";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+
+            <div class="fb-share-button" data-href="{{@blog.url}}{{url}}" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Compartir</a></div>
+
+          </li>
+
+          <li>
+              <a href="https://twitter.com/share" class="twitter-share-button" data-via="01luisrene">Twittear</a> 
+              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            </a>
+          </li>
+          <li>
+            <a class="google-plus flex jcc aicenter" href="https://plus.google.com/share?url={{blog.url}}{{url}}"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+              <i class="icon-google-plus3" aria-hidden="true"></i>&nbsp;Google+
+
+            </a>
+          </li>
+        </ul>
+      </div>
 
       {{content}}
       {{!-- Publicidad Footer Post --}}
@@ -51,8 +82,7 @@
               (adsbygoogle = window.adsbygoogle || []).push({});
       </script>
       </div>
-      <h4 class="titulo-compartir">Compártelo en tus redes sociales, para que tus amigos lo lean&nbsp;:)</h4>
-      <div class="addthis_sharing_toolbox compartir-redes-sociales"></div>
+      
     </section>
     <footer class="post-footer">
     {{!-- Información sobre el autor del post --}}

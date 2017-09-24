@@ -3,6 +3,41 @@
   margin-bottom: 0.5em;
 }
 
+//==========================COMPARTIR============================//
+.compartir-redes-sociales{
+  margin-bottom: 1.5em;
+  ul{
+    vertical-align: top;
+    li{
+      display: inline-block;
+      margin-bottom: 0 !important;
+      line-height: 0;
+      &:nth-child(1){}
+      &:nth-child(2){}
+      &:nth-child(3){
+        background: $google-plus;
+        border-radius: 3px;
+        font-size: 12px;
+        padding: 4px 4px;
+        &:hover{
+          background: lighten($google-plus, 7%);
+        }
+        a{
+          color: $color-blanco;
+          &:hover{
+            color: $color-blanco;
+            text-decoration: none;
+          }
+        }
+      }
+      &:not(:last-child){
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+
 //==========================SECCIÓN META============================//
 .post-meta{
   margin-bottom: 0.5em;
@@ -82,23 +117,6 @@
     margin: 2em 0;
     height: 1px;
     width: 100%;
-    &::before{
-      background-color: #fff;
-      box-shadow: 0px 5px 32px 0px rgba(255,255,255,1);
-      color: #333030;
-      content: "•••";
-      font-size: 2em;
-      line-height: 0.7;
-      letter-spacing: 1px;
-      text-align: center;
-      margin-left: -22px;
-      position: absolute;
-      top: -11px;
-      left: 50%;
-      height: 23px;
-      width: 44px;
-      z-index: 99;
-    }
   }
   //Etilos para los links
   a {

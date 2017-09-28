@@ -18,13 +18,17 @@
   <article class="{{post_class}}">
     <header class="page-header">
       <h1 class="post-titulo">{{title}}</h1>
-      <div class="box-time flex wrap aicenter">
-        <span class="icon-clock"></span>
-        <time class="time" datetime="{{date format="YYYY-MM-DD"}}"> {{date format="DD MMMM YYYY"}}</time>
-      </div>
+
+      <section class="page-meta flex wrap jcfs aicenter ">
+        <div class="box-time flex wrap aicenter">
+          <span class="icon-clock"></span>
+          <time class="time" datetime="{{date format="YYYY-MM-DD"}}">{{date published_at timeago="true"}}</time>
+        </div>
+      </section>
+      
     </header>
     <section class="post_contenido">
-        <div class="addthis_sharing_toolbox compartir-redes-sociales"></div>
+        <div class="addthis_sharing_toolbox compartir-redes-sociales flex jcc"></div>
         {{content}}
     </section>
   </article>

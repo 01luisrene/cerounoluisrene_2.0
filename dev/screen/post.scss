@@ -8,9 +8,8 @@
   margin-bottom: 1.5em;
 }
 
-
-//==========================SECCIÓN META============================//
-.post-meta{
+//==========================SECCIÓN META: post & page============================//
+.post-meta, .page-meta{
   margin-bottom: 0.5em;
   .box-time{
     border-right: thin solid $color-gris-light;

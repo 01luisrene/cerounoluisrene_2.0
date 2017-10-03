@@ -144,17 +144,17 @@
     }
     &:nth-child(2) .nav-link{
       &::before{
-        content: "\e90f"; //Buscador
+        content: "\e903"; //Contacto
       }
     }
     &:nth-child(3) .nav-link{
       &::before{
-        content: "\e903"; //Contacto
+        content: "\e900"; //Sobre mí
       }
     }
     &:nth-child(4) .nav-link{
       &::before{
-        content: "\e900"; //Sobre mí
+        content: "\e90f"; //Buscador
       }
     }
     //Tamaño de iconos del menú

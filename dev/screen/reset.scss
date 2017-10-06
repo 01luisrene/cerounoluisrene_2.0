@@ -32,7 +32,6 @@ sup { top: -0.5em; }
 sub { bottom: -0.25em; }
 img { border: 0; }
 svg:not(:root) { overflow: hidden; }
-figure { margin: 1em 40px; }
 hr { box-sizing: content-box; height: 0; }
 code, kbd, pre, samp { font-family: monospace, monospace; font-size: 1em; }
 button, input, optgroup, select, textarea {
@@ -99,14 +98,14 @@ td, th{ padding: 0; }
 }
 //====================================ICONOS==================================
 @font-face {
-  font-family: 'iconos';
-  src:  url('/assets/fonts/iconos.eot?yz4alh');
-  src:  url('/assets/fonts/iconos.eot?yz4alh#iefix') format('embedded-opentype'),
-    url('/assets/fonts/iconos.ttf?yz4alh') format('truetype'),
-    url('/assets/fonts/iconos.woff?yz4alh') format('woff'),
-    url('/assets/fonts/iconos.svg?yz4alh#iconos') format('svg');
-  font-weight: normal;
-  font-style: normal;
+    font-family: "iconos";
+    src: url("/assets/fonts/iconos.eot"); /* IE9 */
+    src: url("/assets/fonts/iconos.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("/assets/fonts/iconos.woff") format("woff"), /* chrome, firefox */
+    url("/assets/fonts/iconos.ttf") format("truetype"),/* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url("/assets/fonts/iconos.svg#iconos") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
 }
 
 [class^="icon-"], [class*=" icon-"] {
@@ -124,6 +123,9 @@ td, th{ padding: 0; }
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-bitbucket:before {
+  content: "\e911";
+}
 .icon-chevron-down:before {
   content: "\e90b";
 }
@@ -242,7 +244,7 @@ blockquote, pre, hr, figure {
 //.fluid-width-video-wrapper: Contenedor de los videos YouTube y más.
 //.cp_embed_wrapper: Contenedor del código de Codepen
 
-[class*="tabla"],form, pre, .fluid-width-video-wrapper, .cp_embed_wrapper{
+[class*="tabla"],form, pre, .fluid-width-video-wrapper, .cp_embed_wrapper, figure{
   margin-bottom: 1.5em;
 }
 form fieldset{

@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
 		sass = require('gulp-sass'),
 		rename = require("gulp-rename"),
+		es6transpiler = require('gulp-es6-transpiler'),
 		cleanCss = require('gulp-clean-css'),
 		autoprefixer = require('gulp-autoprefixer'),
 		concat = require('gulp-concat'),

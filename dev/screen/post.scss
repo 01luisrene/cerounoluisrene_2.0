@@ -99,7 +99,8 @@
     }
 
     &.codepen,
-    &.github{
+    &.github,
+    &.bitbucket{
       display: inline-block;
       background: #070707;
       background: linear-gradient(90deg, #070707 0,lighten(#070707, 25%) 85%);
@@ -131,8 +132,20 @@
         content: "\eab0";
       }
     }
+
+    &.bitbucket{
+      &::before{
+        content: "\e911";
+      }
+    }
     
-  }  
+  } 
+
+  figure.is-loaded{
+    img{
+      animation: fadeIn 0.38s linear 1s forwards;
+    }
+  }
   
 } //=========FIN POST CONTENT=============//
 

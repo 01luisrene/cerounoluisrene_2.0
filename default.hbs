@@ -29,6 +29,7 @@
       $(document).ready(function() {
         //Videos responsivos
         $('.post_contenido').fitVids();
+
         //Dar una buena presentación al código
         $('pre code').each(function(i, block) {
           hljs.highlightBlock(block);
@@ -50,7 +51,30 @@
             }
         });
       });
+
     </script>
+    {{#is "post"}}
+    <script src="{{ asset "js/in-view.min.js"}}"></script>
+    <script>
+	    inView( '.post_contenido figure.lazyload' ).on( 'enter', function( figure ) {
+	        var img = figure.querySelector( 'img' );
+	        if (  'undefined' !== typeof img.dataset.src ) {
+	            figure.classList.add( 'is-loading' );
+	            newImg = new Image();
+	            newImg.src = img.dataset.src;
+	            newImg.addEventListener( 'load', function() {
+	                figure.innerHTML = '';
+	                figure.appendChild( this );
+	                setTimeout( function() {
+	                    figure.classList.remove( 'is-loading' );
+	                    figure.classList.add( 'is-loaded' );
+	                }, 300 );
+	            } );
+	        }
+	    } );
+    </script>
+    {{/is}}
+    
     <!-- Go to www.addthis.com/dashboard to customize your tools --> 
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57004124cf559f51"></script> 
 </body>

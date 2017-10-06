@@ -49,17 +49,7 @@ var  displayMenu = function(){
     });
   },
   post_contenido = function(){
-    $('.post_contenido a.codepen, .post_contenido a.github').attr('target', '_blank');
-  },
-  jail = function(){
-
-    $('img.lazy').jail({
-      timeout: 2000,
-      effect: 'fadeOut',
-      speed : 1000,
-      loadHiddenImages : true
-    });
-    
+    $('.post_contenido a.codepen, .post_contenido a.github, .post_contenido a.bitbucket').attr('target', '_blank');
   },
  // 01luisrene javascripts initialization
   init = function () {
@@ -68,7 +58,6 @@ var  displayMenu = function(){
     botonUp();
     scroll_abajo();
     post_contenido();
-    jail();
   };
 
   return {

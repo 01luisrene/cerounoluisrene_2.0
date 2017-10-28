@@ -65,14 +65,18 @@ a.boton-subir{
   border: 3px solid darken($color-tema, 3%);
   display: none;
   border-radius: 50%;
-  height: 80px;
-  width: 80px;
-  margin-right: -40px;
-  padding: 10px 10px 10px 23px;
+  height: 50px;
+  width: 50px;
   position: fixed;
-  right: 50%;
-  bottom: -40px;
+  right: 10px;
+  bottom: 50px;
   z-index: 999999999;
+  &.open{
+    display: flex;
+  }
+  &.close{
+    display: none;
+  }
   &:focus{
     outline: none;
   }

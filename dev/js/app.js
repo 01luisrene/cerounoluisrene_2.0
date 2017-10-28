@@ -30,9 +30,11 @@ var  displayMenu = function(){
   botonUp = function(){
     $(window).scroll(function(){
       if($(this).scrollTop() > 300){
-        $("#js_up").slideDown(300);
+        $('#js_up').addClass('open');
+        $('#js_up').removeClass('close')
       }else{
-        $("#js_up").slideUp(300);
+        $('#js_up').addClass('close');
+        $('#js_up').removeClass('open')
       }
     });
     $("#js_up").on('click', function (e) {

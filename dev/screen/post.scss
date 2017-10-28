@@ -31,8 +31,9 @@
     border-radius: 3px;
   }
   //Centrar imágenes que se encuentran dentro de la etiqueta p
-  p{
-    a img, img{
+  //pero que sean hijos directos a excepción de la etiqueta a
+  p, figure{
+    a img, > img{
       display: block;
       margin: 0 auto;
     }

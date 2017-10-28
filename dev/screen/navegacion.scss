@@ -199,13 +199,15 @@
 .icono-cerrar{
   display: none;
   @include media-query($on-laptop){
-    display: block;
+    display: flex;
     color: $color-blanco;
     cursor: pointer;
     font-size: 1.5em;
     position: absolute;
-    right: 15px;
+    right: 5px;
     top: 5px;
+    height: 45px;
+    width: 45px;
     z-index: 91;
   }
 }

@@ -3,11 +3,6 @@
   margin-bottom: 0.5em;
 }
 
-//==========================COMPARTIR============================//
-.compartir-redes-sociales{
-  margin-bottom: 1.5em;
-}
-
 //==========================SECCIÓN META: post & page============================//
 .post-meta, .page-meta{
   margin-bottom: 0.5em;
@@ -79,15 +74,40 @@
   }
 
   hr{
-    background: $color-gris-light;
+    background: $color-tema;
+    border: 0;
     display: block;
-    border-width:0;
+    overflow: visible;
     position: relative;
     padding: 0;
-    text-rendering: geometricPrecision;
     margin: 2em 0;
     height: 1px;
     width: 100%;
+    &::before{
+      background: $color-verde-light;
+      border-radius: 100%;
+      border: 2px solid $color-verde-limon;
+      content: "";
+      line-height: 0;
+      margin-left: -8px;
+      height: 16px;
+      width: 16px;
+      position: absolute;
+      top: -8px;
+      left: 50%;
+    }
+    &::after{
+      border-radius: 100%;
+      border: 5px solid $color-blanco;
+      content: "";
+      line-height: 0;
+      margin-left: -12px;
+      height: 24px;
+      width: 24px;
+      position: absolute;
+      top: -12px;
+      left: 50%;
+    }
   }
   //Etilos para los links
   a {

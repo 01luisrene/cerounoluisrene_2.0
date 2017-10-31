@@ -23,7 +23,7 @@ var  displayMenu = function(){
       $('#js_barra_aceptacion_cookie').addClass('zoomOutDown')
       setTimeout(function(){
         $('#js_barra_aceptacion_cookie').css('display', 'none');
-        console.log('Haz aceptado el uso de cookies en nuestra web 01luisrene.com ❤');
+        console.log('Haz aceptado el uso de cookies en mi web 01luisrene.com ❤');
       }, 500);
     });
   },
@@ -31,10 +31,15 @@ var  displayMenu = function(){
     $(window).scroll(function(){
       if($(this).scrollTop() > 300){
         $('#js_up').addClass('open');
-        $('#js_up').removeClass('close')
+        $('#js_up').removeClass('close');
+        $('#js_up').removeAttr('style');
       }else{
         $('#js_up').addClass('close');
-        $('#js_up').removeClass('open')
+        $('#js_up').removeClass('open');
+        setTimeout(function(){
+          $('#js_up').css('display', 'none');
+        }, 500);
+        
       }
     });
     $("#js_up").on('click', function (e) {
@@ -51,7 +56,8 @@ var  displayMenu = function(){
     });
   },
   post_contenido = function(){
-    $('.post_contenido a.codepen, .post_contenido a.github, .post_contenido a.bitbucket').attr('target', '_blank');
+    $('.post_contenido a.codepen, .post_contenido a.github, .post_contenido a.bitbucket, .post_contenido a.sitio-web')
+    .attr('target', '_blank');
   },
  // 01luisrene javascripts initialization
   init = function () {

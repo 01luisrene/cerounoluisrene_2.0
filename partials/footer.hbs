@@ -33,15 +33,16 @@
         <p class="copyright">
           <a href="{{@blog.url}}">
             <b>{{@blog.title}}</b></a> 
-            <span class="icon-copyright"></span> 
-            2016 - {{date format="YYYY"}}
+            <span class="icon-copyright"></span>
+            <time datetime="2016-08-29 13:00">2016</time>
+             - <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="YYYY"}}</time>
           </a>
         </p>
       </section>
   </div>
 </footer>
 <!-- Política de cookies  -->
-<div class="barra-aceptacion-cookie animated" id="js_barra_aceptacion_cookie" style="display: none">
+<div class="barra-aceptacion-cookie animated" id="js_barra_aceptacion_cookie" style="display:none">
   <p>Utilizo cookies propios y de terceros. Al continuar navegando por el blog entiendo que aceptas nuestra política de cookies.
   <a href="{{@blog.url}}/politica-cookies/"  class="info-cookie" target="_blank">Más&nbsp;información</a>
   <a href="javascript:void(0)" id="js_btn_cookie" class="btn-cookie">
@@ -51,6 +52,6 @@
 </div>
 
 <!-- Botón up -->
-<a href="javascript:void(0)" id="js_up"  class="boton-subir flex jcc aicenter" title="Subir">
+<a href="javascript:void(0)" id="js_up"  class="boton-subir flex jcc aicenter" title="Subir" style="display:none">
   <i class="icon-rocket"></i>
 </a>

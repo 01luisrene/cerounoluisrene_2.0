@@ -60,10 +60,49 @@
   }
 }
 //=====================================BOTÓN SUBIR=========================//
+@keyframes bounceInUp {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  from {
+    opacity: 0;
+    transform: translate3d(0, 3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(0, -20px, 0);
+  }
+
+  75% {
+    transform: translate3d(0, 10px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, -5px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+}
 a.boton-subir{
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: fadeOutDown;
   background: rgba(0,151,75, .6);
   border: 3px solid darken($color-tema, 3%);
-  display: none;
   border-radius: 50%;
   height: 50px;
   width: 50px;
@@ -72,10 +111,10 @@ a.boton-subir{
   bottom: 50px;
   z-index: 999999999;
   &.open{
-    display: flex;
+    animation-name: bounceInUp;
   }
   &.close{
-    display: none;
+    animation-name: fadeOutDown;
   }
   &:focus{
     outline: none;

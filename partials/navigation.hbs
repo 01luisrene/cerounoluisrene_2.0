@@ -35,10 +35,13 @@
       {{!-- Lista de items menú --}}
       <ul class="nav no-lista">
         {{#foreach navigation}}
-        <li class="nav-item nav-{{slug}}{{#if current}} nav-current{{/if}}">
-          <a class="nav-link" href="{{url absolute="true"}}">{{label}}</a></li>
-        </li>
+          <li class="nav-item nav-{{slug}}{{#if current}} nav-current{{/if}}">
+            <a class="nav-link" href="{{url absolute="true"}}">{{label}}</a></li>
+          </li>
         {{/foreach}}
+        <li class="nav-item nav-search">
+          <a class="nav-link" href="https://01luisrene.com/buscador-articulos/"></a></li>
+        </li>
       </ul>
     </div>
   </div>

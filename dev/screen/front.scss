@@ -25,6 +25,13 @@
     font-size: 7vw;  
     text-shadow: 0.1vw 0.5vw 0.1vw $color-negro;
   }
+
+  &::before{
+   content: "<";
+  }
+  &::after{
+   content: "/>";
+  }
 }
 
 .btn-suscribete{
